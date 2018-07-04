@@ -21,8 +21,8 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('details', 'API\UserController@details');
 });
 
-Route::get('products/get', 'Products\ProductsController@getProducts')->name('getAllProducts');
-Route::get('products/{id}', 'Products\ProductsController@getProduct')->name('getProductById');
-Route::post('products/add', 'Products\ProductsController@addProducts')->name('addProducts');
-Route::post('products/update/{id}', 'Products\ProductsController@updateProduct')->name('updateProductById');
-Route::get('products/delete/{id}', 'Products\ProductsController@deleteProduct')->name('deleteProduct');
+Route::get('product/get', 'Product\ProductController@getProducts')->name('getAllProducts');
+Route::get('product/{value}', 'Product\ProductController@getProduct')->name('getProduct');
+Route::post('product/add', 'Product\ProductController@addProduct')->name('addProduct');
+Route::post('product/update/{value}', 'Product\ProductController@updateProduct')->name('updateProduct');
+Route::get('product/delete/{value}', 'Product\ProductController@deleteProduct')->name('deleteProduct');
