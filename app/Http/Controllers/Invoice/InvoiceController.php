@@ -4,12 +4,16 @@ namespace Api\Http\Controllers\Invoice;
 
 use Api\Http\Controllers\Controller;
 use Api\Invoice;
-
-// use Illuminate\http\Request;
+use Illuminate\http\Request;
 
 class InvoiceController extends Controller
 {
 
+    public function addInvoice(Request $request)
+    {
+        $invoice = Invoice::create($request->all());
+        return $invoice;
+    }
     public function getInvoices()
     {
         $invoices = Invoice::all();

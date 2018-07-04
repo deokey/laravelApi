@@ -30,3 +30,4 @@ Route::get('product/delete/{value}', 'Product\ProductController@deleteProduct')-
 Route::get('invoice/get', 'Invoice\InvoiceController@getInvoices')->name('getAllInvoices');
 Route::get('invoice/{id}', 'Invoice\InvoiceController@getInvoice')->name('getInvoice');
 Route::get('invoice/delete/{value}', 'Invoice\InvoiceController@deleteInvoice')->name('deleteInvoice');
+Route::post('invoice/add', 'Invoice\InvoiceController@addInvoice')->name('addInvoice');
