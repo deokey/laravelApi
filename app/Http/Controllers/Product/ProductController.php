@@ -16,8 +16,8 @@ class ProductController extends Controller
 
     public function addProduct(Request $request)
     {
-        $products = Product::create($request->all());
-        return $products;
+        $product = Product::create($request->all());
+        return $product;
     }
 
     public function getProduct($name)
