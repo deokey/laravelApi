@@ -14,6 +14,7 @@ class InvoiceController extends Controller
         $invoice = Invoice::create($request->all());
         return $invoice;
     }
+
     public function getInvoices()
     {
         $invoices = Invoice::all();
@@ -28,7 +29,6 @@ class InvoiceController extends Controller
 
     public function deleteInvoice($id)
     {
-
         $relations = \DB::statement('delete from invoice_product where invoice_id = :id', ['id' => $id]);
 
         $invoice = \DB::statement('delete from invoices where id = :id', ['id' => $id]);
